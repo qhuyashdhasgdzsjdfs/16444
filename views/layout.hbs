@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Toy Store </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/toy">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/brand">Brand</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/toy/customer">Customer </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{{{body}}}
+<!-- Hero Section -->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Welcome to My Store</h1>
+        <p class="lead text-muted">A place for big kids</p>
+        <p>
+            <a href="/toy" class="btn btn-primary my-2">Product</a>
+            <a href="/brand" class="btn btn-secondary my-2">Brand</a>
+        </p>
+    </div>
+</section>
+
+<!-- Features Section -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-5">
+            <h2>Brand</h2>
+            <p>Explain feature one here. Brief and to the point.</p>
+        </div>
+        <div class="col-md-5">
+            <h2>Product</h2>
+            <p>Detail about feature two. Keep it engaging and informative.</p>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-muted py-5 bg-light">
+    <div class="container">
+        <p class="mb-1">© 2023 MySite</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
