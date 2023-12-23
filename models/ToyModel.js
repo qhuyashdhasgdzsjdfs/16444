@@ -4,6 +4,7 @@ var ToySchema = mongoose.Schema({
    price: String,
    height:String,
    image: String,
+  
    brand: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'brands'  // 'brands': collection
