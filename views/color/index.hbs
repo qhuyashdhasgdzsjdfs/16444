@@ -1,0 +1,17 @@
+<div class="container mt-3">
+      <table class="table table-hover">
+        <tr>
+            <th>Toy color</th>
+        </tr>
+        {{#each colors }}
+        <tr>
+            <td>
+                <a {{ _id }}>{{ name }}</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    <div class="d-flex justify-content-center" role="group" aria-label="Button Group">
+        <a class="btn btn-dark btn-info" href="/color/add">Add new color</a>
+    </div>
+</div>

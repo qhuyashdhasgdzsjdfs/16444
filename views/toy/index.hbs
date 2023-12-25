@@ -11,14 +11,16 @@
       <th>Toy model</th>
       <th>Toy price</th>
       <th>Toy height</th>
+      <th>Color</th>
       <th>Toy image</th>
       <th colspan="2">Menu</th>
    </tr>
    {{#each toys }}
    <tr>
       <td>{{ model }}</td>
-      <td>{{ price }}</td>
-      <td>{{ height }}</td>
+      <td>{{ price }}$</td>
+      <td>{{ height }}cm</td>
+      <td>{{ color }}</td>
       <td>
          <img src="{{ image }}" alt="" width="100" height="120">
       </td>

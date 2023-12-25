@@ -1,16 +1,24 @@
 var mongoose = require('mongoose');
 var ToySchema = mongoose.Schema({
    model: String,
-   price: String,
-   height:String,
+   price: {
+      type: Number,
+      require: true,
+   },
+   height:{
+      type: Number,
+      require: true,
+   },
    image: String,
-  
+   color:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'colors'  
+   },
    brand: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'brands'  // 'brands': collection
+      ref: 'brands'  
    }
-});
-//Relationship : mobiles (many) - brands (one)
+})
 
-var ToyModel = mongoose.model('toys', ToySchema); // 'mobiles' : collection
+var ToyModel = mongoose.model('toys', ToySchema); 
 module.exports = ToyModel;

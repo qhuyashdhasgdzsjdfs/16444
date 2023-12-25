@@ -1,21 +1,40 @@
-<form action="/toy/add" method="post">
-   <h1>Add new toy</h1>
-   Toy model: <input type="text" name="model" id="" required>
-   <br><br>
-   Toy price: <input type="text" name="price" id="" required>
-   <br><br>
-   Toy height: <input type="text" name="height" id="" required>
-   <br><br>
-   Toy image: <input type="url" name="image" id="" required>
-   <br><br>
-  
-   
-   Toy brand: <br>
-   <select name="brand">
-      {{#each brands }}
-      <option value="{{ _id }}"> {{ name }}</option>
-      {{/each}}
-   </select>
-   <br><br>
-   <input type="submit" value="Add">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <form action="/toy/add" method="post">
+                    <h1>Add new toy</h1>
+                    Toy model: <input type="text" name="model" id="" required>
+                    <br><br>
+                    Toy price: <input type="number" name="price" id="" required>
+                    <br><br>
+                    Toy height: <input type="text" name="height" id="" required>
+                    <br><br>
+                    Toy image: <input type="url" name="image" id="" required>
+                    <br><br>
+
+                    Toy brand: <br>
+                    <select name="brand">
+                        {{#each brands }}
+                        <option value="{{ _id }}"> {{ name }}</option>
+                        {{/each}}
+                    </select>
+                    <br><br>
+                    Toy color: <br>
+                    <select name="color">
+                        {{#each colors}}
+                        <option value="{{ _id }}"> {{name}} </option>
+                        {{/each}}
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Add">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

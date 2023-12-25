@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ToyModel = require('../models/ToyModel');
 var BrandModel = require('../models/BrandModel');
+var ColorModel = require('../models/ColorModel');
 
 //URL: localhost:3001/toy
 router.get('/', async (req, res) => {
@@ -19,6 +20,10 @@ router.get('/customer', async (req, res) => {
 router.get('/add', async (req, res) => {
    var brands = await BrandModel.find({});
    res.render('toy/add', { brands });
+})
+router.get('/add', async (req, res) => {
+   var colors = await ColorModel.find({});
+   res.render('toy/add', { colors });
 })
 
 router.post('/add', async (req, res) => {
@@ -70,5 +75,6 @@ router.post('/search', async (req, res) => {
    var toys = await ToyModel.find({ model: new RegExp(keyword, "i") }).populate('brand');
    res.render('toy/index', { toys })
 })
+
 
 module.exports = router;

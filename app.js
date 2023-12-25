@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 // 1A. config location of routers
 var toyRouter = require('./routes/toy');
 var brandRouter = require('./routes/brand');
+var colorRouter = require('./routes/color')
+
 
 var app = express();
 
@@ -31,6 +33,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+  
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -42,6 +46,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/toy', toyRouter);
 app.use('/brand', brandRouter);
+app.use('/color', colorRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
